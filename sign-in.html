@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050608" />
+  <title>Sign in — Grok Trade</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-card" aria-labelledby="signin-title">
+      <a class="auth-brand" href="index.html" aria-label="Grok Trade home">
+        <img src="assets/grok.jpg" alt="" class="auth-logo" />
+        <span>Grok Trade</span>
+      </a>
+      <button class="auth-close" type="button" aria-label="Back to home" onclick="location.href='index.html'">×</button>
+
+      <div class="auth-heading">
+        <h1 id="signin-title">Sign in</h1>
+        <p>Enter your credentials to continue.</p>
+      </div>
+
+      <div id="authMessage" class="auth-message" role="alert" hidden></div>
+
+      <form id="signInForm" class="auth-form" novalidate>
+        <label class="auth-field">
+          <span>Email</span>
+          <input id="email" type="email" inputmode="email" autocomplete="email" placeholder="Email" required />
+        </label>
+
+        <label class="auth-field auth-password">
+          <span>Password</span>
+          <input id="password" type="password" autocomplete="current-password" placeholder="Password" required />
+          <button class="password-toggle" type="button" data-toggle-password="password" aria-label="Show password" aria-pressed="false">◉</button>
+        </label>
+
+        <div class="auth-inline"><a href="forgot-password.html">Forgot password?</a></div>
+        <button class="auth-submit" type="submit" data-default-label="Sign in">Sign in</button>
+      </form>
+
+      <p class="auth-switch">Don't have an account? <a href="sign-up.html">Sign up</a></p>
+      <p class="auth-footnote">Your account remains saved on this device.</p>
+    </section>
+  </main>
+  <script src="auth.js"></script>
+</body>
+</html>
